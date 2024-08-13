@@ -1,0 +1,14 @@
+.tasks {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tasks:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 4px #a505d6e6;
+    cursor: pointer;
+}
+
+.tasks:active {
+    transform: scale(1);
+    box-shadow: 0 2px 4px rgba(12, 196, 73, 0.2);
+}

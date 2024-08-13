@@ -1,0 +1,38 @@
+{% extends "base.html" %} {% block content %}
+<div class="row mt-5">
+  <div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+      <form method="POST" class="card card-body">
+        <h1 class="text-center">Crear Tarea</h1>
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="title">Título:</label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            class="form-control"
+            placeholder="Escribe un título"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="description">Descripción:</label>
+          <textarea
+            type="text"
+            name="description"
+            id="description"
+            class="form-control"
+            placeholder="Escribe una descripción"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="important">Importante:</label>
+          <input type="checkbox" name="important" id="important" />
+        </div>
+        <b class="mt-3" style="color: #dc3545">{{error}}</b>
+        <button class="btn btn-primary mt-3">Guardar</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
